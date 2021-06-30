@@ -3,7 +3,7 @@
 require('dotenv').config();
 const io = require('socket.io-client');
 const BASE_URL = process.env.BASE_URL;
-const EXTENSION = process.env.EXTENSION;
+const EXTENSION = process.env.EXTENSION1;
 const client = io.connect(`${BASE_URL}/${EXTENSION}`);
 
 client.on('success', () => {
@@ -23,10 +23,10 @@ client.on('success', () => {
       event: 'pickup',
       time: dateTime,
       payload: {
-        store: 'Store1',
-        storeId: 'Store1Id',
+        store: 'Store2',
+        storeId: 'Store2Id',
         orderID: 'e3669048-7313-427b-b6cc-74010ca1f8f0',
-        customer: 'Jane Doe',
+        customer: 'John Doe',
         address: 'Schmittfort, LA'
       }
     }
